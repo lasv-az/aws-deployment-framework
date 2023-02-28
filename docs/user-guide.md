@@ -355,8 +355,9 @@ pipelines:
           account_id: 222222222222
       build:
         provider: codebuild
-        role: packer
-        size: medium
+        properties:
+          role: packer
+          size: medium
     params:
       schedule: rate(7 days)
     # What should trigger this pipeline
@@ -417,8 +418,9 @@ pipelines:
           account_id: 222222222222
       build:
         provider: codebuild
-        role: packer
-        size: medium
+        properties:
+          role: packer
+          size: medium
     # What should trigger this pipeline, and what should be triggered
     # when it completes
     triggers:
